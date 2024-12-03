@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/contact_controller.dart';
 import '../models/contact.dart';
-import '../services/api_service.dart';
+import '../services/cep_service.dart';
 import '../utils/formatter.dart';
 
 class ContactFormScreen extends StatefulWidget {

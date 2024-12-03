@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
 
 class APIService {
-  final Dio _dio = Dio();
+  final Dio _dio;
+
+  APIService({Dio? dio}) : _dio = dio ?? Dio();
 
   Future<Map<String, String>?> getAddress(String cep) async {
     try {

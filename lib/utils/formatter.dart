@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 
 class Formatter {
-  /// Formata o número de telefone para o padrão (XX) XXXXX-XXXX.
+  // Formata o número de telefone para o padrão (XX) XXXXX-XXXX.
   static String formatPhone(String phone) {
     phone = phone.replaceAll(RegExp(r'\D'), '');
     if (phone.length > 10) {
@@ -15,7 +15,7 @@ class Formatter {
     }
   }
 
-  /// Formata o CEP para o padrão XXXXX-XXX.
+  // Formata o CEP para o padrão XXXXX-XXX.
   static String formatCep(String cep) {
     cep = cep.replaceAll(RegExp(r'\D'), '');
     if (cep.length <= 5) {
@@ -25,7 +25,7 @@ class Formatter {
     }
   }
 
-  /// Retorna um `TextInputFormatter` para formatar o telefone.
+  // Retorna um `TextInputFormatter` para formatar o telefone.
   static TextInputFormatter phoneInputFormatter() {
     return TextInputFormatter.withFunction((oldValue, newValue) {
       final formatted = formatPhone(newValue.text);
@@ -36,7 +36,7 @@ class Formatter {
     });
   }
 
-  /// Retorna um `TextInputFormatter` para formatar o CEP.
+  // Retorna um `TextInputFormatter` para formatar o CEP.
   static TextInputFormatter cepInputFormatter() {
     return TextInputFormatter.withFunction((oldValue, newValue) {
       final formatted = formatCep(newValue.text);

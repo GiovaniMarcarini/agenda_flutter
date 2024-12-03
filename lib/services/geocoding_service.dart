@@ -1,8 +1,12 @@
 import 'package:dio/dio.dart';
 
 class GeocodingService {
-  final Dio _dio = Dio();
-  final String _apiKey = 'AIzaSyBo4jxNJrw39BOoRVWDy7l2UIgB_Pn1APs';
+  final Dio _dio;
+  final String _apiKey;
+
+  GeocodingService({Dio? dio, String? apiKey})
+      : _dio = dio ?? Dio(),
+        _apiKey = apiKey ?? 'AIzaSyBo4jxNJrw39BOoRVWDy7l2UIgB_Pn1APs';
 
   Future<Map<String, double>?> getCoordinatesFromAddress(String address) async {
     try {
