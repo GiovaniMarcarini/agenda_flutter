@@ -6,7 +6,7 @@ class GeocodingService {
 
   GeocodingService({Dio? dio, String? apiKey})
       : _dio = dio ?? Dio(),
-        _apiKey = apiKey ?? 'AIzaSyBo4jxNJrw39BOoRVWDy7l2UIgB_Pn1APs';
+        _apiKey = apiKey ?? 'SUA CHAVE DE API';
 
   Future<Map<String, double>?> getCoordinatesFromAddress(String address) async {
     try {

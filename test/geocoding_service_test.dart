@@ -13,7 +13,7 @@ void main() {
 
   setUp(() {
     mockDio = MockDio();
-    geocodingService = GeocodingService(dio: mockDio); // Injeta o mock
+    geocodingService = GeocodingService(dio: mockDio);
   });
 
   group('GeocodingService Tests', () {
